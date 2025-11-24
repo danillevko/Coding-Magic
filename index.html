@@ -10,17 +10,26 @@
         rel="stylesheet">
     <title>Coding Magic</title>
 </head>
+<script src="./magic.js"></script>
 
 <body>
     <header class="header">
         <div class="container container-header">
             <ul class="header-list">
                 <a href="./index.html"><img src="./imgs/Group 4.png" alt="logo" class="header-logo logo"></a>
-                <li class="header-item"><a href="" class="header-link">Інтерактив</a></li>
+                <li class="header-item header-item-more"><a href="" class="header-link">Інтерактив</a> <button
+                        class="header-btn-more" id="btn-more"></button>
+
+                    <ul class="header-list-more hidden" id="list-more">
+                        <li class="more-item">Числовий</li>
+                        <li class="more-item">Ігровий</li>
+                        <li class="more-item">Ознайомчий</li>
+                    </ul>
+                </li>
                 <li class="header-item"><a href="" class="header-link">Наша команда</a></li>
                 <li class="header-item"><a href="" class="header-link">Контакти</a></li>
             </ul>
-            <span class="header-span">Вітаємо, !</span>
+            <span class="header-span"></span>
         </div>
         <div class="overlay hidden" id="welcome-overlay">
             <div class="modal">
@@ -41,6 +50,6 @@
 
     </main>
 </body>
-<script href="./magic.js"></script>
+
 
 </html>
