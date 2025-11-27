@@ -10,7 +10,7 @@
         rel="stylesheet">
     <title>Coding Magic</title>
 </head>
-<script src="./magic.js"></script>
+<script src="./modal.js"></script>
 
 <body>
     <header class="header">
@@ -19,7 +19,6 @@
                 <a href="./index.html"><img src="./imgs/Group 4.png" alt="logo" class="header-logo logo"></a>
                 <li class="header-item header-item-more"><a href="" class="header-link">Інтерактив</a> <button
                         class="header-btn-more" id="btn-more"></button>
-
                     <ul class="header-list-more hidden" id="list-more">
                         <li class="more-item">Числовий</li>
                         <li class="more-item">Ігровий</li>
@@ -47,9 +46,26 @@
         </div>
     </header>
     <main>
+        <div class="container year-section">
+            <h1 class="main-title">Популярні інтeрактивні ігри</h1><br>
+            <hr><br>
+            <h2 class="year-title">Перевір в який рік ти народився</h2>
+            <div class="year-game">
+                <div class="year-wrapper">
+                    <input type="text" placeholder="Введіть рік народження" class="year-text" id="year-text-input">
+                    <button class="year-btn" id="year-btn-submit" type="button"><img src="./imgs/Group 104.png" alt="" class="img-year"></button>
+                </div>
+                <p class="year-result" id="year-result"></p>
+            </div>
+            <br>
+            <hr><br>
+        </div>
+        <div class="container num-section">
 
+        </div>
     </main>
 </body>
+<script src="./magic.js"></script>
 
 
 </html>

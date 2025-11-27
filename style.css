@@ -3,6 +3,10 @@ body {
     padding: 0;
     font-family: Montserrat Alternates;
 }
+.container{
+    width: 629px;
+    margin: 0 auto;
+}
 
 .header {}
 
@@ -109,15 +113,27 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    opacity: 1;
 }
 
+.modal {
+    display: block;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 392px;
+    min-height: 223px;
+    transform: translate(-50%, -50%);
+}
 .modal-close {
     width: 15px;
     height: 15px;
     background-color: black;
     border: 2px solid white;
     border-radius: 50%;
-    margin-left: 50%;
+    margin-left: 97%;
 }
 
 .modal-close:hover {
@@ -125,12 +141,6 @@ body {
     background-color: rgb(17, 17, 17);
 }
 
-.modal {
-    padding: 184px 95px;
-    display: block;
-    text-align: center;
-    background-color: white;
-}
 
 .modal p {
     margin: 0;
@@ -176,4 +186,76 @@ body {
 .modal-btn:hover {
     cursor: pointer;
     background-color: rgb(17, 17, 17);
+}
+
+
+
+
+/* FIRST YEAR GAME */
+main{
+    margin-top: 34px;
+    margin-bottom: 34px;
+}
+.year-section{
+    align-items: center;
+    text-align: center;
+}
+.main-title {
+    height: 29px;
+    font-size: 24px;
+    color: black;
+    font-weight: 400;
+}
+.year-game {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: center;
+}
+.year-title {
+    height: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 36px;
+}
+
+.year-wrapper {
+    width: 215px;
+    height: 35px;
+    display: flex;              
+    align-items: center;
+}
+
+.year-text {
+    flex: 1;                  
+    height: 100%;
+    padding-left: 12px;
+    border: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #D7D7D7;
+    outline: none;
+}
+
+.year-btn {
+    width: 40px;
+    height: 100%;
+    border: none;
+    background-color: black;
+    color: white;               
+    font-size: 16px;
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.year-result {
+    height: 15px;
+    font-size: 12px;
+}
+.img-year{
+    width: 15px;
+    height: 15px;
 }
