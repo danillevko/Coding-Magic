@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 // YEAR GAME
 const btnFinder = document.getElementById('year-btn-submit');
-const inputText = document.querySelector('.year-text');
+const inputText = document.querySelector('.year-num-text');
 const spanResult = document.querySelector('#year-result');
 btnFinder.addEventListener('click', ()=>{
     const year = Number(inputText.value);
@@ -49,3 +49,29 @@ btnFinder.addEventListener('click', ()=>{
         spanResult.style.color = 'red';
     }
 });
+
+// NUMBER
+
+const btnFinderNum = document.getElementById('num-btn-submit');
+const inputTextNum = document.querySelector('#num-text-input');
+const spanResultNum = document.querySelector('#num-result');
+btnFinderNum.addEventListener('click', ()=>{
+    let randomNumber = Math.floor((Math.random() * 10) + 1);
+    let num = Number(inputTextNum.value);
+    if(num === randomNumber){
+        spanResultNum.textContent = `Вітаю, ви вгадали число! ${randomNumber} `;
+        spanResultNum.style.color = 'green';
+    } else{
+        spanResultNum.textContent = `Ви програли, комп’ютер загадав ${randomNumber} `;
+        spanResultNum.style.color = 'red';
+    }
+})
+
+// RPS
+
+const btnRps = document.querySelectorAll('#btn-rps');
+const resultRps = document.querySelector('#rps-result');
+const mainScore = document.querySelector('#main-score');
+const pcScore = document.querySelector('#pc-score');
+const humanScore = document.querySelector('#human-score');
+const variables = {rock:'scissors', scissors:'paper', paper:'rock'};

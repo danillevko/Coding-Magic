@@ -206,26 +206,26 @@ main{
     color: black;
     font-weight: 400;
 }
-.year-game {
+.year-num-game {
     display: flex;
     justify-content: space-between;
     vertical-align: center;
 }
-.year-title {
+.title {
     height: 20px;
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 36px;
 }
 
-.year-wrapper {
+.year-num-wrapper {
     width: 215px;
     height: 35px;
     display: flex;              
     align-items: center;
 }
 
-.year-text {
+.year-num-text {
     flex: 1;                  
     height: 100%;
     padding-left: 12px;
@@ -236,7 +236,7 @@ main{
     outline: none;
 }
 
-.year-btn {
+.year-num-btn {
     width: 40px;
     height: 100%;
     border: none;
@@ -251,11 +251,95 @@ main{
     justify-content: center;
 }
 
-.year-result {
+.year-num-result {
     height: 15px;
     font-size: 12px;
 }
-.img-year{
+.img-num-year{
     width: 15px;
     height: 15px;
+}
+.num-section{
+    text-align: center;
+}
+
+
+/* RPS */
+.RPS-section{
+    margin: 0 auto;
+    font-size: 16px;
+    text-align: center;
+}
+.title {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.rps-btn-wrapper {
+    margin: 0 auto;
+    width: 256px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.rps-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    border: none;
+    
+    background-color: black;
+    padding: 10px;
+}
+.rps-btn:hover {
+    cursor: pointer;
+    background-color: rgb(17, 17, 17);
+}
+
+.rps-result-text {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 12px;
+}
+
+.rps-score {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: left;
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-score {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.pc-score,
+.human-score {
+    margin: 5px 0;
+}
+
+.pc-num-score,
+.human-num-score {
+    font-weight: 600;
+}
+
+
+.pc-btn-variable {
+    width: 182px;
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-family: Montserrat Alternates;
+    font-size: 12px;
+    display: block;
 }

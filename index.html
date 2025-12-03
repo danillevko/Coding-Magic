@@ -49,19 +49,61 @@
         <div class="container year-section">
             <h1 class="main-title">Популярні інтeрактивні ігри</h1><br>
             <hr><br>
-            <h2 class="year-title">Перевір в який рік ти народився</h2>
-            <div class="year-game">
-                <div class="year-wrapper">
-                    <input type="text" placeholder="Введіть рік народження" class="year-text" id="year-text-input">
-                    <button class="year-btn" id="year-btn-submit" type="button"><img src="./imgs/Group 104.png" alt="" class="img-year"></button>
+            <h2 class="title">Перевір в який рік ти народився</h2>
+            <div class="year-num-game">
+                <div class="year-num-wrapper">
+                    <input type="text" placeholder="Введіть рік народження" class="year-num-text" id="year-text-input">
+                    <button class="year-num-btn" id="year-btn-submit" type="button"><img src="./imgs/Group 104.png"
+                            alt="" class="img-num-year"></button>
                 </div>
-                <p class="year-result" id="year-result"></p>
+                <p class="year-num-result" id="year-result"></p>
             </div>
             <br>
             <hr><br>
         </div>
         <div class="container num-section">
+            <h2 class="title">Вгадай число, яке загадав комп’ютер</h2>
+            <div class="year-num-game">
+                <div class="year-num-wrapper">
+                    <input type="text" placeholder="Введіть число" class="year-num-text" id="num-text-input">
+                    <button class="year-num-btn" id="num-btn-submit" type="button"><img src="./imgs/Group 104.png"
+                            alt="" class="img-num-year"></button>
+                </div>
+                <p class="year-num-result" id="num-result"></p>
+            </div>
+            <br>
+            <hr><br>
+        </div>
+        <div class="container RPS-section">
+            <h2 class="title">Камінь - ножиці - папір</h2>
+            <div class="rps-btn-wrapper">
+                <button class="rps-btn" id="btn-rps"></button>
+                <button class="rps-btn" id="btn-rps"></button>
+                <button class="rps-btn" id="btn-rps"></button>
+            </div>
+            <p class="rps-result-text" id="rps-result"></p>
+            <div class="rps-score">
+                <p id="main-score" class="main-score">Рахунок:</p>
+                <p class="pc-score">Комп’ютер - <span id="pc-score" class="pc-num-score"></span></p>
+                <p class="human-score">Ви - <span id="human-score" class="human-num-score"></span></p>
+            </div>
+            <button class="pc-btn-variable" id="pc-variable">Варіант комп’ютера</button>
+        </div>
+        <div class="container calc-section">
+            <h2 class="calc-title">Калькулятор</h2>
+            <div class="calc-wrapper">
+                <input type="text" class="calc-input" id="num-one" placeholder="Введіть число">
+                <div class="operators">
+                    <button class="op-btn" id="plus">+</button>
+                    <button class="op-btn" id="multiply">*</button>
+                    <button class="op-btn" id="minus">-</button>
+                    <button class="op-btn" id="devide">/</button>
+                </div>
+                <input type="text" class="calc-input" id="num-two" placeholder="Введіть число">
+                <button class="equals-btn" id="equals">=</button>
+                <input type="text" class="result-input" id="result" placeholder="Результат">
 
+            </div>
         </div>
     </main>
 </body>
