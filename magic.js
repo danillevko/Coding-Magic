@@ -69,9 +69,66 @@ btnFinderNum.addEventListener('click', ()=>{
 
 // RPS
 
-const btnRps = document.querySelectorAll('#btn-rps');
-const resultRps = document.querySelector('#rps-result');
-const mainScore = document.querySelector('#main-score');
-const pcScore = document.querySelector('#pc-score');
-const humanScore = document.querySelector('#human-score');
-const variables = {rock:'scissors', scissors:'paper', paper:'rock'};
+// const btnRps = document.querySelectorAll('#btn-rps');
+// const resultRps = document.querySelector('#rps-result');
+// const pcScore = document.querySelector('#pc-score');
+// const humanScore = document.querySelector('#human-score');
+// const pcVariableBtn = document.querySelector('#pc-variable');
+// const variables = {rock:'scissors', scissors:'paper', paper:'rock'};
+// let pcChoise = null;
+// let pcNUmber = 0;
+// let humanNUmber = 0;
+// let humanChoise = null;
+// btnRps.forEach(element => {
+//     element.addEventListener('click', ()=>{
+//         let humanChoise = element.dataset.type;
+//     });
+// });
+// pcVariableBtn.addEventListener('click', ()=>{
+//     let variablesKeys = Object.keys(variables);
+//     let randomChoise = Math.floor(Math.random() * variablesKeys.length);
+//     pcChoise = variablesKeys[randomChoise];
+//     pcVariableBtn.textContent = pcChoise;
+//     if(pcChoise === humanChoise){
+//         resultRps.textContent = 'draw';
+//     } else if(pcChoise)
+// });
+
+// CALC
+
+const numOne = document.querySelector('#num-one');
+const numTwo = document.querySelector('#num-two');
+const calcResult = document.querySelector('#result');
+const plus = document.querySelector('#plus');
+const minus = document.querySelector('#minus');
+const multiply = document.querySelector('#multiply');
+const devide = document.querySelector('#devide');
+const equals = document.querySelector('#equals');
+let currentOperator = null;
+plus.addEventListener('click', () => {
+    currentOperator = '+';
+});
+minus.addEventListener('click', () => {
+    currentOperator = '-';
+});
+multiply.addEventListener('click', () => {
+    currentOperator = '*';
+});
+devide.addEventListener('click', () => {
+    currentOperator = '/';
+});
+equals.addEventListener('click', () => {
+    const a = Number(numOne.value);
+    const b = Number(numTwo.value);
+    let number;
+    if(currentOperator === '+'){
+        number = a + b;
+    } else if(currentOperator === '-'){
+        number = a - b;
+    } else if(currentOperator === '*'){
+        number = a * b;
+    } else if(currentOperator === '/'){
+        number = a / b;
+    }
+    calcResult.value = number;
+});

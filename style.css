@@ -343,3 +343,45 @@ main{
     font-size: 12px;
     display: block;
 }
+
+
+/* CALC */
+
+.calc-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.calc-input, .result-input {
+    width: 135px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    background-color: #D7D7D7;
+    text-align: center;
+    font-size: 12px;
+}
+
+.operators {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.op-btn, .equals-btn {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.op-btn:hover, .equals-btn:hover {
+    background-color: rgb(17, 17, 17);
+}
