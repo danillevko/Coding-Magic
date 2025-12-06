@@ -69,30 +69,47 @@ btnFinderNum.addEventListener('click', ()=>{
 
 // RPS
 
-// const btnRps = document.querySelectorAll('#btn-rps');
-// const resultRps = document.querySelector('#rps-result');
-// const pcScore = document.querySelector('#pc-score');
-// const humanScore = document.querySelector('#human-score');
-// const pcVariableBtn = document.querySelector('#pc-variable');
-// const variables = {rock:'scissors', scissors:'paper', paper:'rock'};
-// let pcChoise = null;
-// let pcNUmber = 0;
-// let humanNUmber = 0;
-// let humanChoise = null;
-// btnRps.forEach(element => {
-//     element.addEventListener('click', ()=>{
-//         let humanChoise = element.dataset.type;
-//     });
-// });
-// pcVariableBtn.addEventListener('click', ()=>{
-//     let variablesKeys = Object.keys(variables);
-//     let randomChoise = Math.floor(Math.random() * variablesKeys.length);
-//     pcChoise = variablesKeys[randomChoise];
-//     pcVariableBtn.textContent = pcChoise;
-//     if(pcChoise === humanChoise){
-//         resultRps.textContent = 'draw';
-//     } else if(pcChoise)
-// });
+const btnRps = document.querySelectorAll('#btn-rps');
+const resultRps = document.querySelector('#rps-result');
+const pcScore = document.querySelector('#pc-score');
+const humanScore = document.querySelector('#human-score');
+const pcVariableBtn = document.querySelector('#pc-variable');
+const variables = {rock:'scissors', scissors:'paper', paper:'rock'};
+let pcChoise = null;
+let humanChoise = null;
+let pcNumber = 0;
+let humanNumber = 0;
+btnRps.forEach(element => {
+    element.addEventListener('click', ()=>{
+        humanChoise = element.dataset.type;
+    });
+});
+pcVariableBtn.addEventListener('click', ()=>{
+    if(!humanChoise){
+        resultRps.textContent = 'Зробіть свій вибір спочатку!';
+        resultRps.style.color = 'grey';
+        return
+    }
+    let variablesKeys = Object.keys(variables);
+    let randomChoise = Math.floor(Math.random() * variablesKeys.length);
+    pcChoise = variablesKeys[randomChoise];
+    pcVariableBtn.textContent = pcChoise;
+    if(pcChoise === humanChoise){
+        resultRps.textContent = 'Нічия';
+        resultRps.style.color = 'grey';
+    } else if(variables[humanChoise] === pcChoise){
+        humanNumber++
+        humanScore.textContent = humanNumber;
+        resultRps.textContent = 'Ви виграли раунд!';
+        resultRps.style.color = 'green';
+    } else{
+        pcNumber++
+        pcScore.textContent = pcNumber;
+        resultRps.textContent = 'Комп’ютер виграв раунд!';
+        resultRps.style.color = 'red';
+    }
+    humanChoise = null;
+});
 
 // CALC
 
@@ -102,7 +119,7 @@ const calcResult = document.querySelector('#result');
 const plus = document.querySelector('#plus');
 const minus = document.querySelector('#minus');
 const multiply = document.querySelector('#multiply');
-const devide = document.querySelector('#devide');
+const divide = document.querySelector('#divide');
 const equals = document.querySelector('#equals');
 let currentOperator = null;
 plus.addEventListener('click', () => {
@@ -114,7 +131,7 @@ minus.addEventListener('click', () => {
 multiply.addEventListener('click', () => {
     currentOperator = '*';
 });
-devide.addEventListener('click', () => {
+divide.addEventListener('click', () => {
     currentOperator = '/';
 });
 equals.addEventListener('click', () => {

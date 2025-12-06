@@ -3,7 +3,8 @@ body {
     padding: 0;
     font-family: Montserrat Alternates;
 }
-.container{
+
+.container {
     width: 629px;
     margin: 0 auto;
 }
@@ -74,7 +75,8 @@ body {
     font-size: 12px;
     align-items: center;
 }
-.more-item:hover{
+
+.more-item:hover {
     background-color: #f1f1f1;
 }
 
@@ -94,6 +96,7 @@ body {
 .header-item-more {
     position: relative;
 }
+
 .hidden {
     display: none;
 }
@@ -127,6 +130,7 @@ body {
     min-height: 223px;
     transform: translate(-50%, -50%);
 }
+
 .modal-close {
     width: 15px;
     height: 15px;
@@ -192,25 +196,29 @@ body {
 
 
 /* FIRST YEAR GAME */
-main{
+main {
     margin-top: 34px;
     margin-bottom: 34px;
 }
-.year-section{
+
+.year-section {
     align-items: center;
     text-align: center;
 }
+
 .main-title {
     height: 29px;
     font-size: 24px;
     color: black;
     font-weight: 400;
 }
+
 .year-num-game {
     display: flex;
     justify-content: space-between;
     vertical-align: center;
 }
+
 .title {
     height: 20px;
     font-size: 16px;
@@ -221,12 +229,12 @@ main{
 .year-num-wrapper {
     width: 215px;
     height: 35px;
-    display: flex;              
+    display: flex;
     align-items: center;
 }
 
 .year-num-text {
-    flex: 1;                  
+    flex: 1;
     height: 100%;
     padding-left: 12px;
     border: none;
@@ -241,7 +249,7 @@ main{
     height: 100%;
     border: none;
     background-color: black;
-    color: white;               
+    color: white;
     font-size: 16px;
     cursor: pointer;
     border-top-right-radius: 20px;
@@ -255,21 +263,24 @@ main{
     height: 15px;
     font-size: 12px;
 }
-.img-num-year{
+
+.img-num-year {
     width: 15px;
     height: 15px;
 }
-.num-section{
+
+.num-section {
     text-align: center;
 }
 
 
 /* RPS */
-.RPS-section{
+.RPS-section {
     margin: 0 auto;
     font-size: 16px;
     text-align: center;
 }
+
 .title {
     text-align: center;
     margin: 0;
@@ -289,10 +300,11 @@ main{
     height: 60px;
     border-radius: 20px;
     border: none;
-    
+
     background-color: black;
     padding: 10px;
 }
+
 .rps-btn:hover {
     cursor: pointer;
     background-color: rgb(17, 17, 17);
@@ -355,7 +367,8 @@ main{
     margin-top: 20px;
 }
 
-.calc-input, .result-input {
+.calc-input,
+.result-input {
     width: 135px;
     height: 35px;
     border-radius: 20px;
@@ -371,7 +384,8 @@ main{
     gap: 5px;
 }
 
-.op-btn, .equals-btn {
+.op-btn,
+.equals-btn {
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -382,6 +396,48 @@ main{
     cursor: pointer;
 }
 
-.op-btn:hover, .equals-btn:hover {
+.op-btn:hover,
+.equals-btn:hover {
     background-color: rgb(17, 17, 17);
 }
+
+
+/* TIME */
+
+
+.time-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.time-input {
+    flex: 1;
+    height: 100%;
+    padding-left: 12px;
+    border: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #D7D7D7;
+    outline: none;
+}
+
+.year-num-btn {
+    width: 40px;
+    height: 100%;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dots-span {}
+
+.time-result {}
