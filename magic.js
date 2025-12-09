@@ -149,3 +149,28 @@ equals.addEventListener('click', () => {
     }
     calcResult.value = number;
 });
+
+// TIME CALC
+
+const timeBtn = document.querySelector('#time-btn');
+const timeInput = document.querySelector('#time-input');
+const timeResult = document.querySelector('#time-result');
+timeBtn.addEventListener('click', ()=>{
+    const sec = Number(timeInput.value);
+    const days = Math.floor(sec / 86400);
+    const hours = Math.floor((sec % 86400) / 3600);
+    const minutes = Math.floor((sec % 3600) / 60);
+    const seconds = Math.floor(sec % 60);
+    timeResult.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+})
+
+
+// SOCER
+
+
+const socerBall = document.querySelector('#socer-ball');
+const socerField = document.querySelector('#socer-field');
+socerBall.addEventListener('mouseover', ()=>{
+    let ballPos = socerBall.getBoundingClientRect();
+    let fieldPos = socerField.getBoundingClientRect();
+})

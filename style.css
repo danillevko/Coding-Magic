@@ -407,12 +407,12 @@ main {
 
 .time-wrapper {
     display: flex;
-    justify-content: space-between;
+    gap: 50px;
     align-items: center;
 }
 
 
-.time-input {
+/* .time-input {
     flex: 1;
     height: 100%;
     padding-left: 12px;
@@ -436,8 +436,49 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+} */
+
+.dots-span {
+    width: 100px;
 }
 
-.dots-span {}
+.time-result {
+    height: 15px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+}
 
-.time-result {}
+/* DINOSAUR */
+.dinosaur {
+    width: 48px;
+    height: 53px;
+    position: relative;
+    bottom: -70px;
+    left: 100px;
+    z-index: 999;
+}
+
+.game-road {
+    width: 628px;
+    position: sticky;
+}
+
+
+/* SOCER */
+
+.socer-wrapper {
+    width: 628px;
+    height: 220px;
+    background-color: #5ABB58;
+    outline: 2px solid black;
+    border-radius: 37px;
+    position: relative;
+    margin-top: 30px;
+}
+
+.socer-ball {
+    position: absolute;
+    top: 40%;
+    left: 100px;
+}
