@@ -482,3 +482,36 @@ main {
     top: 40%;
     left: 100px;
 }
+
+
+/* BIGGEST NUM */
+
+.three-nums-ssection{
+    text-align: center;
+}
+
+.three-nums-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.three-nums {
+    text-align: center;
+    height: 35px;
+    width: 135px;
+    border: none;
+    border-radius: 20px;
+    background-color: #D7D7D7;
+    outline: none;
+}
+
+.three-num-btn {
+    width: 102px;
+    height: 35px;
+    background-color: #000;
+    border: none;
+    color: white;
+    border-radius: 20px;
+}
+
+.three-nums-result {}

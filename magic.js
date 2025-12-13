@@ -174,3 +174,23 @@ socerBall.addEventListener('mouseover', ()=>{
     let ballPos = socerBall.getBoundingClientRect();
     let fieldPos = socerField.getBoundingClientRect();
 })
+
+
+// BIGGEST NUM
+
+const biggestNum = document.querySelectorAll('.three-nums');
+const biggestNumResult = document.querySelector('#three-nums-result');
+const biggestNumBtn = document.querySelector('#three-num-btn');
+biggestNumBtn.addEventListener('click', ()=>{
+    let a = Number(biggestNum[0].value);
+    let b = Number(biggestNum[1].value);
+    let c = Number(biggestNum[2].value);
+    let biggest = a;
+    if(b > biggest){
+        biggest = b;
+    }
+    if(c > biggest){
+        biggest = c;
+    }
+    biggestNumResult.textContent = `Найбільше число, яке ви ввели - ${biggest}`;
+});
