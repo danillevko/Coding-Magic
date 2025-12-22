@@ -194,3 +194,20 @@ biggestNumBtn.addEventListener('click', ()=>{
     }
     biggestNumResult.textContent = `Найбільше число, яке ви ввели - ${biggest}`;
 });
+
+
+// SLIDER
+
+const track = document.querySelector('.slider-track');
+const slides = document.querySelectorAll('.slide');
+const nextBtn = document.querySelector('.next-btn');
+const prevBtn = document.querySelector('.prev-btn');
+let slideNum = 0;
+nextBtn.addEventListener('click', ()=>{
+    slideNum = (slideNum + 1) % slides.length;
+    track.style.transform = `translateX(-${slideNum * 628}px)`;
+})
+prevBtn.addEventListener('click', ()=>{
+    slideNum = (slideNum - 1 + slides.length) % slides.length;
+    track.style.transform = `translateX(-${slideNum * 628}px)`;
+})
