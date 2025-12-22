@@ -165,6 +165,7 @@ timeBtn.addEventListener('click', ()=>{
 })
 
 
+
 // SOCER
 
 
@@ -197,7 +198,6 @@ biggestNumBtn.addEventListener('click', ()=>{
 
 
 // SLIDER
-
 const track = document.querySelector('.slider-track');
 const slides = document.querySelectorAll('.slide');
 const nextBtn = document.querySelector('.next-btn');
@@ -210,4 +210,41 @@ nextBtn.addEventListener('click', ()=>{
 prevBtn.addEventListener('click', ()=>{
     slideNum = (slideNum - 1 + slides.length) % slides.length;
     track.style.transform = `translateX(-${slideNum * 628}px)`;
+});
+
+
+
+// DINO
+
+const dino = document.querySelector('#dino');
+const cactus = document.querySelector('.cactus');
+document.addEventListener('keydown', (event)=>{
+    if(event.code === "KeyW" || event.code === "ArrowUp"){
+        jump();
+    }
+})
+function jump(){
+    if(!dino.classList.contains('dino-jump')){
+        dino.classList.add('dino-jump');
+    }
+    setTimeout(function(){
+        dino.classList.remove('dino-jump');
+    }, 300);
+};
+
+let dinoAlive = setInterval(function(){
+    let dinoTop = parseInt(getComputedStyle(dino).top);
+    let cactusLeft = parseInt(getComputedStyle(cactus).left);
+
+    if (cactusLeft < 150 && cactusLeft > 60 && dinoTop > 100){
+        gameOver.style.display = 'block';
+
+         cactus.style.animation = 'none';
+         cactus.style.left = '120px';
+    }
+}, 10);
+
+restartBtn.addEventListener('click', function(){
+    cactus.style.animation = 'cactusMove 1.3s infinite linear';
+    gameOver.style.display = 'none';
 })

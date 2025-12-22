@@ -465,17 +465,34 @@ main {
 }
 
 .dinosaur {
+    position: relative;
     background-image: url(./imgs/dino.svg);
     background-repeat: no-repeat;
-    position: relative;
     background-size: 80px 80px;
     width: 80px;
     height: 80px;
     top: 64px;
 }
 
-.google-dinosaur {
+.dino-jump {
+    animation: dino-jump 0.3s linear;
 }
+
+@keyframes dino-jump {
+    0% { top: 64px; }
+    10% { top: 45px; }
+    20% { top: 20px; }
+    30% { top: 0px; }
+    40%{ top: -30px; }
+    50% { top: -50px; }
+    60% { top: -30px; }
+    70% {top: 0px;}
+    80% { top: 22px; }
+    90% { top: 40px; }
+    100% { top: 64px; }
+}
+
+.google-dinosaur {}
 
 .cactus {
     background-image: url(./imgs/photo_2025-12-13_14-37-02.jpg);
@@ -487,16 +504,41 @@ main {
     top: 20px;
     animation: cactus-move 1.3s infinite linear;
 }
-@keyframes cactus-move{
-    0%{left: 615px;}
-    100%{left: -10px;}
+
+@keyframes cactus-move {
+    0% {
+        left: 615px;
+    }
+
+    100% {
+        left: -10px;
+    }
 }
 
-.game-over {}
+.game-over {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 20%;
+    z-index: 999;
+    & .game-over-title {
+        margin: 18px 0;
+    }
+    & .restart {
+        width: 72px;
+        height: 64px;
+        margin: 0px 10px;
+        background-image: url(/img/restartBtn.png);
+        background-repeat: no-repeat;
+        border: none;
+        border-radius: 20px
+    }
+};
 
 .over-title {}
 
-.over-restart-btn {}
+.over-restart-btn {
+}
 
 
 /* SOCER */
@@ -550,20 +592,20 @@ main {
 
 
 /* SLIDER */
-.slider-section{
+.slider-section {
     margin: 0 auto;
     align-items: center;
     text-align: center;
 }
 
-.slider{
+.slider {
     margin: 0 auto;
     overflow: hidden;
     width: 628px;
     position: relative;
 }
 
-.slider-track{
+.slider-track {
     display: flex;
 }
 
@@ -577,14 +619,17 @@ main {
     height: 150px;
     border-radius: 20px;
 }
+
 .slider-name {
     font-weight: 400;
     font-size: 14px;
 }
+
 .slider-info {
     font-size: 12px;
 }
-.slider-btn{
+
+.slider-btn {
     position: absolute;
     top: 50%;
     border: none;
@@ -592,12 +637,15 @@ main {
     color: #6a6a6a;
     border-radius: 50%;
 }
-.slider-btn:hover{
+
+.slider-btn:hover {
     cursor: pointer;
 }
-.prev-btn{
+
+.prev-btn {
     left: 5px
 }
-.next-btn{
+
+.next-btn {
     right: 5px;
 }
