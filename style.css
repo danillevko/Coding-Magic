@@ -12,8 +12,8 @@ body {
 .header {}
 
 .container-header {
+    width: 1440px;
     justify-content: space-between;
-    width: 1090px;
     height: 80px;
     display: flex;
     margin: 0 auto;
@@ -479,17 +479,49 @@ main {
 }
 
 @keyframes dino-jump {
-    0% { top: 64px; }
-    10% { top: 45px; }
-    20% { top: 20px; }
-    30% { top: 0px; }
-    40%{ top: -30px; }
-    50% { top: -50px; }
-    60% { top: -30px; }
-    70% {top: 0px;}
-    80% { top: 22px; }
-    90% { top: 40px; }
-    100% { top: 64px; }
+    0% {
+        top: 64px;
+    }
+
+    10% {
+        top: 45px;
+    }
+
+    20% {
+        top: 20px;
+    }
+
+    30% {
+        top: 0px;
+    }
+
+    40% {
+        top: -30px;
+    }
+
+    50% {
+        top: -50px;
+    }
+
+    60% {
+        top: -30px;
+    }
+
+    70% {
+        top: 0px;
+    }
+
+    80% {
+        top: 22px;
+    }
+
+    90% {
+        top: 40px;
+    }
+
+    100% {
+        top: 64px;
+    }
 }
 
 .google-dinosaur {}
@@ -521,9 +553,11 @@ main {
     top: 0px;
     right: 20%;
     z-index: 999;
+
     & .game-over-title {
         margin: 18px 0;
     }
+
     & .restart {
         width: 72px;
         height: 64px;
@@ -533,12 +567,13 @@ main {
         border: none;
         border-radius: 20px
     }
-};
+}
+
+;
 
 .over-title {}
 
-.over-restart-btn {
-}
+.over-restart-btn {}
 
 
 /* SOCER */
@@ -648,4 +683,71 @@ main {
 
 .next-btn {
     right: 5px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.container-footer {
+    width: 1440px;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: center;
+}
+.footer-logo {
+    width: 165px;
+    height: 70px;
+}
+.footer-logo:hover{
+    cursor: pointer;
+}
+.footer-list {
+    text-decoration: none;
+    list-style: none;
+    font-size: 12px;
+}
+
+.footer-item {
+    margin-bottom: 4.5px;
+}
+
+.footer-wrapper {}
+
+.footer-email {
+    padding: 0;
+    width: 204px;
+    height: 35px;
+    background-color: #D7D7D7;
+    border-radius: 20px;
+    border: none;
+    padding-left: 12px;
+    font-size: 12px;
+    margin-right: 35px;
+}
+
+.footer-sub-btn {
+    height: 35px;
+    width: 107px;
+    border-radius: 20px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+.footer-sub-btn:hover{
+    cursor: pointer;
+    background-color: rgb(17, 17, 17);
+}
+
+.footer-hint {
+    font-size: 7px;
+    font-weight: 500;
+    margin-top: 30px;
 }

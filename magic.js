@@ -213,6 +213,29 @@ prevBtn.addEventListener('click', ()=>{
 });
 
 
+// FOOTER
+
+const footerInput = document.querySelector('.footer-email');
+const subBtn = document.querySelector('.footer-sub-btn');
+subBtn.addEventListener('click', ()=>{
+    footerInput.value = null;
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // DINO
 
