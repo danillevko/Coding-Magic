@@ -685,6 +685,62 @@ main {
     right: 5px;
 }
 
+/* CARDS */
+.cards {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 59px;
+    max-width: 628px;
+}
+
+.cards li {
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    height: 120px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    text-align: center;
+}
+
+.btns-wrapper {
+    display: flex;
+    gap: 35px;
+    margin-bottom: 24px;
+}
+
+.btns-column{
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.btns-column-two {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.cards-btns {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 22px;
+    font-size: 12px;
+    text-align: center;
+    max-width: 628px;
+}
+
+.cards-btns:hover {
+    cursor: pointer;
+    background-color: rgb(17, 17, 17);
+}
+
 
 /* FOOTER */
 
@@ -702,13 +758,16 @@ main {
     align-items: center;
     vertical-align: center;
 }
+
 .footer-logo {
     width: 165px;
     height: 70px;
 }
-.footer-logo:hover{
+
+.footer-logo:hover {
     cursor: pointer;
 }
+
 .footer-list {
     text-decoration: none;
     list-style: none;
@@ -741,7 +800,8 @@ main {
     background-color: black;
     color: white;
 }
-.footer-sub-btn:hover{
+
+.footer-sub-btn:hover {
     cursor: pointer;
     background-color: rgb(17, 17, 17);
 }
