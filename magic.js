@@ -311,9 +311,59 @@ const scientists = [
 const cards = document.querySelector('.cards');
 scientists.forEach(scientists => {
     const li = document.createElement('li');
+    li.dataset.born = scientists.born;
+    li.dataset.dead = scientists.dead;
+    li.classList.add('cards-item');
     li.textContent = `${scientists.name} ${scientists.surname} ${scientists.born}-${scientists.dead}`;
     cards.append(li);
 });
+
+const cardsItem = document.querySelectorAll('.cards-item');
+const quesOne = document.querySelector('#quesOne');
+const quesTwo = document.querySelector('#quesTwo');
+const quesThree = document.querySelector('#quesThree');
+const quesFour = document.querySelector('#quesFour');
+const quesFive = document.querySelector('#quesFive');
+const quesSix = document.querySelector('#quesSix');
+const quesSeven = document.querySelector('#quesSeven');
+const quesEight = document.querySelector('#quesEight');
+const quesNine = document.querySelector('#quesNine');
+// Які вчені народилися в 19 ст.
+quesOne.addEventListener('click', () => {
+    cardsItem.forEach(li => {
+        const born = Number(li.dataset.born);
+
+        if (born >= 1801 && born <= 1900) {
+            li.style.border = '2px solid blue';
+        } else {
+            li.style.backgroundColor = '';
+        }
+    });
+});
+// Відсортувати вчених за алфавітом
+quesTwo.addEventListener('click', ()=>{
+    cardsItem.forEach(li =>{
+        const items = Array.from(cardsItem);
+        li.dataset.name = li.name;
+        items.sort((a, b) => a.textContent.localeCompare(b.textContent));
+        cards.innerHTML = '';
+        items.forEach(li =>{
+            cards.append(li);
+        });
+    });
+});
+// Відсортувати вчених за кількістю прожитих років
+quesThree.addEventListener('click', ()=>{
+    const items = Array.from(cards.children);
+    items.sort((a, b) => {
+        const yearsA = a.dataset.dead - a.dataset.born;
+        const yearsB = b.dataset.dead - b.dataset.born;
+        return yearsA - yearsB;
+    });
+   cards.replaceChildren(...items);
+});
+// Знайти вченого, який народився найпізніше
+
 
 
 // FOOTER
@@ -342,35 +392,35 @@ subBtn.addEventListener('click', ()=>{
 
 // DINO
 
-const dino = document.querySelector('#dino');
-const cactus = document.querySelector('.cactus');
-document.addEventListener('keydown', (event)=>{
-    if(event.code === "KeyW" || event.code === "ArrowUp"){
-        jump();
-    }
-})
-function jump(){
-    if(!dino.classList.contains('dino-jump')){
-        dino.classList.add('dino-jump');
-    }
-    setTimeout(function(){
-        dino.classList.remove('dino-jump');
-    }, 300);
-};
+// const dino = document.querySelector('#dino');
+// const cactus = document.querySelector('.cactus');
+// document.addEventListener('keydown', (event)=>{
+//     if(event.code === "KeyW" || event.code === "ArrowUp"){
+//         jump();
+//     }
+// })
+// function jump(){
+//     if(!dino.classList.contains('dino-jump')){
+//         dino.classList.add('dino-jump');
+//     }
+//     setTimeout(function(){
+//         dino.classList.remove('dino-jump');
+//     }, 300);
+// };
 
-let dinoAlive = setInterval(function(){
-    let dinoTop = parseInt(getComputedStyle(dino).top);
-    let cactusLeft = parseInt(getComputedStyle(cactus).left);
+// let dinoAlive = setInterval(function(){
+//     let dinoTop = parseInt(getComputedStyle(dino).top);
+//     let cactusLeft = parseInt(getComputedStyle(cactus).left);
 
-    if (cactusLeft < 150 && cactusLeft > 60 && dinoTop > 100){
-        gameOver.style.display = 'block';
+//     if (cactusLeft < 150 && cactusLeft > 60 && dinoTop > 100){
+//         gameOver.style.display = 'block';
 
-         cactus.style.animation = 'none';
-         cactus.style.left = '120px';
-    }
-}, 10);
+//          cactus.style.animation = 'none';
+//          cactus.style.left = '120px';
+//     }
+// }, 10);
 
-restartBtn.addEventListener('click', function(){
-    cactus.style.animation = 'cactusMove 1.3s infinite linear';
-    gameOver.style.display = 'none';
-})
+// restartBtn.addEventListener('click', function(){
+//     cactus.style.animation = 'cactusMove 1.3s infinite linear';
+//     gameOver.style.display = 'none';
+// })

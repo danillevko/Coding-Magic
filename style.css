@@ -713,6 +713,9 @@ main {
     gap: 35px;
     margin-bottom: 24px;
 }
+.cards-item{
+    background-color: black;
+}
 
 .btns-column{
     gap: 25px;
