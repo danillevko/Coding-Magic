@@ -363,7 +363,61 @@ quesThree.addEventListener('click', ()=>{
    cards.replaceChildren(...items);
 });
 // Знайти вченого, який народився найпізніше
-
+quesFour.addEventListener('click', ()=>{
+    let latest = cardsItem[0];
+    cardsItem.forEach(li =>{
+        if(+li.dataset.born > +latest.dataset.born){
+            latest = li;
+        }
+    });
+    cardsItem.forEach(li => li.style.border = '');
+    latest.style.border = '2px solid blue';
+});
+// Знайти рік народження Albert Einshtein
+quesFive.addEventListener('click', ()=>{
+    cardsItem.forEach(li => {
+        if(li.textContent.includes('Albert')){
+            li.style.border = '2px solid blue';
+        } else{
+            li.style.border = '';
+        }
+    })
+});
+// Знайти вчених, прізвища яких починаються на на літеру “С” 
+quesSix.addEventListener('click', ()=>{
+    cardsItem.forEach(li =>{
+        if(li.textContent.includes('C')){
+            li.style.border = '2px solid blue';
+        } else{
+            li.style.border = '';
+        }
+    })
+})
+// Видалити всіх вчених, ім’я яких починається на “А”
+quesSeven.addEventListener('click', ()=>{
+    cardsItem.forEach(li =>{
+        if(li.textContent.includes('A')){
+            li.textContent = '';
+        }
+    })
+})
+// Знайти вченого, який прожив найдовше і вченого, який прожив найменше
+quesEight.addEventListener('click', ()=>{
+    let min = cardsItem[0];
+    let max = cardsItem[0];
+    cardsItem.forEach(li =>{
+        const years = li.dataset.dead - li.dataset.born;
+        if(years > max.dataset.dead - max.dataset.born){
+            max = li;
+        };
+        if(years < min.dataset.dead - min.dataset.born){
+            min = li;
+        };
+        cardsItem.forEach(li => li.style.border = '');
+        max.style.border = '2px solid blue';
+        min.style.border = '2px solid blue';
+    })
+});
 
 
 // FOOTER
