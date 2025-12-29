@@ -313,6 +313,8 @@ scientists.forEach(scientists => {
     const li = document.createElement('li');
     li.dataset.born = scientists.born;
     li.dataset.dead = scientists.dead;
+    li.dataset.name = scientists.name;
+    li.dataset.surname = scientists.surname;
     li.classList.add('cards-item');
     li.textContent = `${scientists.name} ${scientists.surname} ${scientists.born}-${scientists.dead}`;
     cards.append(li);
@@ -399,7 +401,7 @@ quesSeven.addEventListener('click', ()=>{
         if(li.textContent.includes('A')){
             li.textContent = '';
         }
-    })
+    });
 })
 // Знайти вченого, який прожив найдовше і вченого, який прожив найменше
 quesEight.addEventListener('click', ()=>{
@@ -417,6 +419,17 @@ quesEight.addEventListener('click', ()=>{
         max.style.border = '2px solid blue';
         min.style.border = '2px solid blue';
     })
+});
+// Знайти вчених, в яких співпадають перші літери імені і прізвища
+let g = [];
+quesNine.addEventListener('click', ()=>{
+    g = Array.from(cardsItem).filter(li =>{
+        return li.dataset.name[0].toLowerCase() === li.dataset.surname[0].toLowerCase();
+    })
+    g.forEach(li =>{
+        li.style.border = '2px solid blue';
+    })
+    console.log(g);
 });
 
 
